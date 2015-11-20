@@ -29,7 +29,7 @@
         equal(JS_BASICS.longestString(['Holà','\u265E','你好']),'Holà','utf-8...');
         equal(JS_BASICS.longestString(['Holà','\u265E','你好']),'Holà','utf-8...');
         equal(JS_BASICS.longestString([true,false,'lol']),'lol','various types');
-        equal(JS_BASICS.longestString([{object: true,mainly: 'to confuse you'},'x']),'lol','various types');
+        equal(JS_BASICS.longestString([{object: true,mainly: 'to confuse you'},'x']),'x','various types');
     });
 
     test('test reverseString', function() {
@@ -46,7 +46,7 @@
 
     test('test nestedSum', function() {
         equal(JS_BASICS.nestedSum([1,2,3,4,5]), 15, 'flat number array');
-        equal(JS_BASICS.nestedSum([[1,2,false],'4','5']), 15, 'nested array and other types');
+        equal(JS_BASICS.nestedSum([[1,2,false],'4','5']), 3, 'nested array and other types');
         equal(JS_BASICS.nestedSum([[[[[[[[[1]]]]]]]], 1]), 2, 'deeply nested array');
         equal(JS_BASICS.nestedSum([['A','B','C', 1,2,3]]), 6, 'deeply nested array + Strings');
         equal(JS_BASICS.nestedSum(['1','2','3',1,2,3]), 6, 'carrefull with  coerced value');
